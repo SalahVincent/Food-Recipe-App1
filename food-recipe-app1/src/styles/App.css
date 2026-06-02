@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #fff;
+}
+
+.bd {
+  background-color: none;
+}
+
+.welcome {
+  background: linear-gradient(#00000073), url("./get_started_bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: 0%;
+}
+
+.quote {
+  background: #ffffff25;
+  backdrop-filter: blur(5px)
+}
+
+.quote em {
+  font-family: Noto Serif, sans-serif;  
+}
+
+h1, h2, h3, .quick-details {
+  font-family: Noto Serif, sans-serif;
+  cursor: default;
+}
+
+.formOne {
+  width: 38%;
+}
+
+.formTwo {
+  width: 58%;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+nav li:hover {
+  color: #e93646;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-animation {
+  animation: slideIn 0.9s ease-out forwards;
+}
+
+.filter-active-red {
+  filter: invert(27%) sepia(87%) saturate(3015%) hue-rotate(341deg) brightness(93%) contrast(92%);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .side1, .side3 {
+    display: none;
+  }
+
+  .side2 {
+    width: 100%;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
