@@ -9,7 +9,7 @@ const Dashboard = () => {
             <h2 className='font-bold text-[3.5rem]'>Your Kitchen</h2>
             <p className='text-lg text-gray-600'>Curate, curate and plate your culnary adventures</p>
         </div>
-        <Button className='px-6'><img src="./plus.svg" alt="" />Add Recipe</Button>
+        <a href="/add"><Button className='px-6'><img src="./plus.svg" alt="" />Add Recipe</Button></a>
     </div>
     </>
   )

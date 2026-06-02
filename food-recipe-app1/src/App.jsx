@@ -4,6 +4,7 @@ import Favorites from "./pages/Favorites";
 import Navbar from "./components/parts/Navbar";
 import './styles/App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RecipeForm from "./pages/RecipeForm";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Routes>
               <Route path='/' element={<DashBoard />} />
               <Route path='/favorites' element={<Favorites />} />
+              <Route path='/add' element={<RecipeForm/>} />
           </Routes>
       </BrowserRouter>
     </>
