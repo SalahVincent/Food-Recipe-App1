@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #f3f2f2;
+}
+
+h1, h2, h3, .quick-details {
+  font-family: Noto Serif, sans-serif;
+  cursor: default;
+}
+
+.formOne {
+  width: 38%;
+}
+
+.formTwo {
+  width: 58%;
+}
+
+nav li:hover {
+  color: #e93646;
+}
