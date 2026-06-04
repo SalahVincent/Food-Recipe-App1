@@ -3,7 +3,7 @@ import { RecipeContext } from "../context/RecipeContext";
 import Button from "../components/ui/Button";
 import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const Board = () => {
   const { state, dispatch } = useContext(RecipeContext);
 
   const filteredRecipes = state.recipes.filter(recipe =>
@@ -127,4 +127,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Board;
