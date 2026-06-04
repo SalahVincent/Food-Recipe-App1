@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Button = ({ children }) => {
+const Button = ({ children, onClick }) => {
   return (
-    <div className='bg-[#e63946] text-white py-3 px-12 rounded-md hover:bg-[#d90429] flex gap-2'>
+    <button
+    className='bg-[#e63946] text-white py-3 px-12 rounded-md hover:bg-[#d90429] flex gap-2 cursor-pointer'
+    onClick={onClick}>
       {children}
-    </div>
+    </button>
   )
 }
+
 export default Button

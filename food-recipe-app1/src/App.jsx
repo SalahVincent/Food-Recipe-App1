@@ -1,22 +1,24 @@
-import React from "react";
-import DashBoard from "./pages/DashBoard";
-import Favorites from "./pages/Favorites";
-import Navbar from "./components/parts/Navbar";
+import { useState } from 'react'
 import './styles/App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RecipeForm from "./pages/RecipeForm";
+import Dashboard from './pages/Dashboard'
+import Favorites from './pages/Favorites'
+import Navbar from './components/layout/Navbar'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import RecipeForm from './pages/RecipeForm'
+import Footer from './components/layout/Footer'
 
 const App = () => {
+  const location = useLocation()
+  const showSidebarPaths = ['/', '/favorites']
+
   return (
     <>
-     <BrowserRouter>
         <Navbar />
           <Routes>
-              <Route path='/' element={<DashBoard />} />
+              <Route path='/' element={<Dashboard />} />
               <Route path='/favorites' element={<Favorites />} />
-              <Route path='/add' element={<RecipeForm/>} />
+              <Route path='/add' element={<RecipeForm />} /> 
           </Routes>
-      </BrowserRouter>
     </>
   )
 }
